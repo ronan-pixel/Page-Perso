@@ -1,0 +1,1 @@
+this is the README for my personal page, it's my CV as a web developer, it shows my skills and the projects i worked on and contain a link to my GitHub
