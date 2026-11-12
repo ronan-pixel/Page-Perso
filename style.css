@@ -42,7 +42,6 @@ h1{
 }
 .sections{
    display: grid;
-   grid-template-columns:repeat 1fr;
    gap: var(--espace-section);
 }
 .section{
@@ -68,7 +67,8 @@ form{
    }
    .sections{
       display: flex;
+      display: grid;
       flex-wrap: wrap;
-      grid-template-columns:repeat(2, 1fr 1fr);
+      grid-template-columns:repeat(2, 50%);
    }
 }
