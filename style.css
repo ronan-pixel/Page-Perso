@@ -28,7 +28,8 @@ nav{
    gap: var(--espace-1);
 }
 .img{
-   position:relative;
+   max-width: 100%;
+   height: auto;
 }
 h1{
 
@@ -49,7 +50,12 @@ h1{
    padding: var(--espace-section);
 }
 a{
-   color: white;
+   color: var(--couleur-texte);
+   text-decoration: underline;
+   text-decoration-color: var(--couleur-titre);
+}
+a:focus-visible{
+   outline: 3px solid, color var(--couleur-bord);
 }
 form{
    display: flex;
@@ -69,6 +75,6 @@ form{
       display: flex;
       display: grid;
       flex-wrap: wrap;
-      grid-template-columns:repeat(2, 50%);
+      grid-template-columns:repeat(2, 1fr);
    }
 }
