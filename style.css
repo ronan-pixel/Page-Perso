@@ -7,15 +7,19 @@
    --couleur-titre: blueviolet;
    --couleur-bord: blue;
    --espace-section: 1rem;
+   --arrondi-carte: 0.75rem;
    --espace-1: 0.5rem;
    --espace-2: 2rem;
+   --espace-3: 2.5rem;
    --texte-titre: 2rem;
+   --texte-petit: 0.875rem;
 }
 body{
    background-color: var(--couleur-fond);
    color: var(--couleur-texte);
    margin: 0 auto;
    padding: var(--espace-1) var(--espace-2);
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 header nav{
    display: flex;
@@ -28,11 +32,12 @@ nav{
    gap: var(--espace-1);
 }
 .img{
+   display: block;
    max-width: 100%;
    height: auto;
+   border-radius: var(--arrondi-carte);
 }
-h1{
-
+h1, h2{
    color: var(--couleur-titre);
    font-size: var(--texte-titre);
    font-weight: bold;
@@ -46,21 +51,50 @@ h1{
    gap: var(--espace-section);
 }
 .section{
+   box-shadow: 0 0.5rem rgb(174, 171, 171);
+   border-radius: var(--arrondi-carte);
    border: 1px solid var(--couleur-bord);
    padding: var(--espace-section);
 }
 a{
-   color: var(--couleur-texte);
    text-decoration: underline;
    text-decoration-color: var(--couleur-titre);
 }
-a:focus-visible{
+a:focus-visible
+input:focus-visible,
+select:focus-visible,
+button:focus-visible{
    outline: 3px solid, color var(--couleur-bord);
+   outline-offset: 2px;
 }
-form{
+nav a{
+    display: inline-block;
+    margin-right: var(--espace-3);
+}
+form p{
    display: flex;
-   flex-direction: column;
+   font-size: var(--texte-petit);
+   justify-content: center;
 }
+label{
+    display: block;
+    margin-bottom: var(--espace-1);
+    font-weight: bold;
+}
+input, select, button, textarea{
+    width: 100%;
+    margin-bottom: var(--espace-3);
+    font: inherit;
+    border: 1px solid var(--couleur-texte);
+}
+.boutton{
+   border-radius: var(--arrondi-carte);
+    padding: var(--espace-2) var(--espace-4);
+    font-weight: bold;
+    background: var(--couleur-titre);
+    border: 0;
+}
+
 
 @media(min-width: 48rem){
    nav{
@@ -70,6 +104,7 @@ form{
    form{
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
    }
    .sections{
       display: flex;
@@ -77,4 +112,5 @@ form{
       flex-wrap: wrap;
       grid-template-columns:repeat(2, 1fr);
    }
+
 }
