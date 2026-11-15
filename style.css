@@ -53,7 +53,7 @@ h1, h2{
 .section{
    box-shadow: 0 0.5rem rgb(174, 171, 171);
    border-radius: var(--arrondi-carte);
-   border: 1px solid var(--couleur-bord);
+   border: 3px solid var(--couleur-bord);
    padding: var(--espace-section);
 }
 a{
@@ -70,6 +70,10 @@ button:focus-visible{
 nav a{
     display: inline-block;
     margin-right: var(--espace-3);
+}
+form{
+   display: flex;
+   padding-top: var(--espace-section);
 }
 form p{
    display: flex;
@@ -88,7 +92,7 @@ input, select, button, textarea{
     border: 1px solid var(--couleur-texte);
 }
 .boutton{
-   border-radius: var(--arrondi-carte);
+    border-radius: var(--arrondi-carte);
     padding: var(--espace-2) var(--espace-4);
     font-weight: bold;
     background: var(--couleur-titre);
@@ -102,6 +106,7 @@ input, select, button, textarea{
       flex-wrap: wrap;
    }
    form{
+      padding-top: var(--espace-section);
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
